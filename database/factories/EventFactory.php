@@ -22,7 +22,7 @@ class EventFactory extends Factory
             'max_participants' => $this->faker->numberBetween(25, 30),
             'min_participants' => $this->faker->numberBetween(2, 25),
             'price' => $this->faker->numberBetween(100, 500),
-            'description' => $this->faker->text(300),
+            'description' => $this->faker->paragraph(3),
             'Included' => $this->faker->text(200),
         ];
     }

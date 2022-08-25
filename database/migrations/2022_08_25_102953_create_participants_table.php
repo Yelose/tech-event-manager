@@ -14,10 +14,10 @@ class CreateParticipantsTable extends Migration
     public function up()
     {
         Schema::create('participants', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            //$table->string();
+            $table->id('DNI');
+            // $table->string('name');
+            // $table->string('email')->unique();
+            // //$table->string();
             $table->timestamps();
         });
     }

@@ -21,3 +21,40 @@ clone env.example and call it .env
 generate key
 
 
+```mermaid
+
+%%{init: {'theme': 'base', 
+'themeVariables': { 
+    'primaryColor': '#ffcccc', 
+    'edgeLabelBackground':'#ffffee', 
+    'tertiaryColor': '#fff0f0',
+    "actorTextColor": "#fff",
+    "textColor": "#712E3D",
+    "actorBorder": "blue"
+    }}}%%
+erDiagram
+    User{
+        int id PK
+        string name
+        string email
+        
+            }
+    
+    Event }|--|{ Event-User : i
+    User }|--|{ Event-User : i
+
+    Event{
+        int id PK
+        string title
+        string description
+        string place
+        string image
+        int max-participants
+        string participant FK
+        string date
+    }
+    Event-User{
+        event user
+    }
+
+```

@@ -14,3 +14,10 @@ npm run dev
 
 ## Preview
 php artisan serve
+
+## Configuration
+clone env.example and call it .env
+
+generate key
+
+

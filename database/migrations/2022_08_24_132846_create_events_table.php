@@ -24,7 +24,7 @@ class CreateEventsTable extends Migration
             $table->integer('min_participants');
             $table->integer('price');
             $table->string('description', 1000);
-            $table->string('Included', 1000);
+            $table->string('included', 1000);
             $table->timestamps();
         });
     }

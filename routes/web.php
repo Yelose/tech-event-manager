@@ -1,17 +1,17 @@
 <?php
 
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Event;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [EventController::class, 'home'])->name('home');
 
-Route::get('/detail', function () {
-    return view('event-detail');
-});
+Route::get('/detail/{event}', [EventController::class, 'detail']);
+
 Route::get('/edit', function () {
     return view('event-edit');
 });
+
 Route::get('/new', function () {
     return view('event-new');
 });

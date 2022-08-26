@@ -27,6 +27,12 @@
     </div>
     @endif
     <div class="slider"></div>
+
+    {{-- <h1>{{$events->title}} ({{$events->id}})</h1> --}}
+    <p>{{$events}}</p>
+    {{-- <p>{{$event->price}}</p>
+    <p>{{$event->stock}}</p>
+    <p>{{$event->status}}</p> --}}
 </body>
 
 </html>

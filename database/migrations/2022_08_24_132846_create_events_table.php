@@ -18,7 +18,7 @@ class CreateEventsTable extends Migration
             $table->string('image');
             $table->string('title');
             $table->date('date');
-            $table->time('Hour');
+            $table->time('hour');
             $table->string('duration');
             $table->integer('max_participants');
             $table->integer('min_participants');

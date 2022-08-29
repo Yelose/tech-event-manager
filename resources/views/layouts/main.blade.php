@@ -6,6 +6,90 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <title>Excursiones Fem-Desk</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        :root {
+            --spacing: calc(2vh + 3vw)
+        }
+    
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+        }
+    
+        main {
+            max-width: 1400px;
+            margin: auto;
+        }
+    
+        .slider {
+            width: 100%;
+            height: 40vh;
+            background-image: url("https://live.staticflickr.com/7750/17906978882_7d028d8daa_b.jpg");
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    
+        .navbar {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #712E3D;
+            padding: 10px;
+        }
+    
+        .navigation-menu>a {
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: clamp(14px, 2vw, 20px);
+        }
+    
+        .navbar>img {
+            width: 50px;
+            height: 50px;
+        }
+    
+        .show-cards {
+            flex-wrap: wrap;
+            gap: var(--spacing);
+            margin: var(--spacing);
+        }
+    
+        .card {
+            min-width: 300px;
+            flex: 10000;
+        }
+    
+        .card-buttons {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        .card-buttons a {
+            background-color: #712E3D;
+            color: white;
+            border: none;
+            text-decoration: none;
+            padding: .5vh calc(.5vw + .5vh);
+            border-radius: 15px;
+        }
+    
+        .card-buttons a:hover {
+            background-color: #B54A62;
+        }
+    </style>
+    
+
 </head>
 <body>
     @yield('content')

@@ -36,6 +36,33 @@
               <p>Salida: {{$event->date}} / {{$event->hour}}</p>
               <p>{{$event->min_participants}} / {{$event->max_participants}} Grupo Min/Max</p>
               <a href="/detail/{{$event->id}}" class="btn btn-primary">más info</a>
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Excursiones Fem-Desk</title>
+</head>
+
+<body>
+    <header>
+        @if (Route::has('login'))
+        <div class="hidden navbar fixed top-0 right-0 px-6 py-4 sm:block">
+            <img src="{{ asset('../img/logoexcursiones.png') }}" alt="logo">
+            <div class="navigation-menu">
+                <a href="{{ url('/') }}">Inicio</a>
+                @auth
+                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                @else
+                <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+
+                @if (Route::has('register'))
+                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                @endif
+                @endauth
             </div>
           </div>
           @endforeach
@@ -43,6 +70,37 @@
     
     @endempty
     {{-- <p>{{$events}}</p> --}}
+        @endif
+        <div class="slider"></div>
+
+        <h1>Viajes Verano, España 2022</h1>
+        @empty($events)
+        <h3>No hay Eventos Disponibles</h3>
+        @else
+    </header>
+    <main>
+        <div class="d-flex flex-row mb-5 show-cards">
+            @foreach ($events as $event)
+            <div class="card">
+                <img src="{{$event->image}}" class="card-img-top" alt="{{$event->title}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{$event->title}}</h5>
+                    <p class="card-text">{{$event->description}}</p>
+                    <p>Salida: {{$event->date}} / {{$event->hour}}</p>
+                    <p>{{$event->min_participants}} / {{$event->max_participants}} Grupo Min/Max</p>
+                    <section class="card-buttons">
+                        <a href="/show/{{$event->id}}">más info</a>
+                        <a href="/show/{{$event->id}}">inscribirse</a>
+                    </section>
+                </div>
+            </div>
+            @endforeach
+        </div>
+
+        @endempty
+        {{-- <p>{{$events}}</p> --}}
+
+    </main>
 
 @endsection 
    
@@ -57,6 +115,12 @@
     body {
         display: flex;
         flex-direction: column;
+        margin: auto;
+    }
+
+    main {
+        max-width: 1400px;
+        margin: auto;
     }
 
     .slider {
@@ -87,5 +151,34 @@
     .navbar>img {
         width: 50px;
         height: 50px;
+    }
+
+    .show-cards {
+        flex-wrap: wrap;
+        gap: var(--spacing);
+        margin: var(--spacing);
+    }
+
+    .card {
+        min-width: 300px;
+        flex: 10000;
+    }
+
+    .card-buttons {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .card-buttons a {
+        background-color: #712E3D;
+        color: white;
+        border: none;
+        text-decoration: none;
+        padding: .5vh calc(.5vw + .5vh);
+        border-radius: 15px;
+    }
+
+    .card-buttons a:hover {
+        background-color: #B54A62;
     }
 </style>

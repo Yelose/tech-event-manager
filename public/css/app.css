@@ -719,6 +719,9 @@ select {
 .ml-4 {
   margin-left: 1rem;
 }
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -745,9 +748,6 @@ select {
 }
 .mt-6 {
   margin-top: 1.5rem;
-}
-.mb-5 {
-  margin-bottom: 1.25rem;
 }
 .ml-0 {
   margin-left: 0px;
@@ -875,6 +875,9 @@ select {
 }
 .flex-col {
   flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
 }
 .items-center {
   align-items: center;

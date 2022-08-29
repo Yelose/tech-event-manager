@@ -13,19 +13,43 @@ class EventController extends Controller
 
         return view('home', ['events' => $events]);
     }
-
-    public function detail($event)
+    public function show($event)
     {
         $event = Event::findOrFail($event);
         return view('event-detail', ['event' => $event]);
     }
 
-    public function edit()
+    public function edit($event)
     {
-        return view('event-edit');
+        $event = Event::findOrFail($event);
+        return view('event-edit', ['event' => $event]);
     }
     public function new()
     {
         return view('event-new');
+    }
+
+    public function index()
+    {
+        //
+    }
+
+    public function create()
+    {
+        //
+    }
+
+    public function store(Request $request)
+    {
+        //
+    }
+
+    public function update(Request $request, $id)
+    {
+        //
+    }
+    public function destroy($id)
+    {
+        //
     }
 }

@@ -46,8 +46,8 @@
                     <p>Salida: {{$event->date}} / {{$event->hour}}</p>
                     <p>{{$event->min_participants}} / {{$event->max_participants}} Grupo Min/Max</p>
                     <section class="card-buttons">
-                        <a href="/detail/{{$event->id}}">más info</a>
-                        <a href="/detail/{{$event->id}}">inscribirse</a>
+                        <a href="/show/{{$event->id}}">más info</a>
+                        <a href="/show/{{$event->id}}">inscribirse</a>
                     </section>
                 </div>
             </div>

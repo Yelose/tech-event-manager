@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Event;
 
 Route::get('/', [EventController::class, 'home'])->name('home');
-Route::get('/detail/{event}', [EventController::class, 'detail']);
+Route::get('/show/{event}', [EventController::class, 'show']);
 Route::get('/edit', [EventController::class, 'edit']);
 Route::get('/new', [EventController::class, 'new']);
 

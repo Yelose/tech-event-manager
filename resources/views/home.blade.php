@@ -31,31 +31,30 @@
 
     <h1>Viajes Verano, España 2022</h1>
     @empty($events)
-        <h3>No hay Eventos Disponibles</h3>
+    <h3>No hay Eventos Disponibles</h3>
     @else
 
-    <div class="d-flex flex-row mb-5">
-        <div class="d-flex flex-column"></div>  
-     @foreach ($events as $event)
-        <div class="card" style="width: 18rem;">
+    <div class="d-flex flex-row mb-5 show-cards">
+        @foreach ($events as $event)
+        <div class="card">
             <img src="{{$event->image}}" class="card-img-top" alt="{{$event->title}}">
             <div class="card-body">
-              <h5 class="card-title">{{$event->title}}</h5>
-              <p class="card-text">{{$event->description}}</p>
-              <p>Salida: {{$event->date}} / {{$event->hour}}</p>
-              <p>{{$event->min_participants}} / {{$event->max_participants}} Grupo Min/Max</p>
-              <a href="/detail/{{$event->id}}" class="btn btn-primary">más info</a>
+                <h5 class="card-title">{{$event->title}}</h5>
+                <p class="card-text">{{$event->description}}</p>
+                <p>Salida: {{$event->date}} / {{$event->hour}}</p>
+                <p>{{$event->min_participants}} / {{$event->max_participants}} Grupo Min/Max</p>
+                <a href="/detail/{{$event->id}}" class="btn btn-primary">más info</a>
             </div>
-          </div>
-          @endforeach
         </div>
-    
+        @endforeach
+    </div>
+
     @endempty
     {{-- <p>{{$events}}</p> --}}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-   
+
 </body>
 
 </html>
@@ -66,9 +65,15 @@
         box-sizing: border-box;
     }
 
+    :root {
+        --spacing: calc(2vh + 3vw)
+    }
+
     body {
         display: flex;
         flex-direction: column;
+        max-width: 1400px;
+        margin: auto;
     }
 
     .slider {
@@ -99,5 +104,16 @@
     .navbar>img {
         width: 50px;
         height: 50px;
+    }
+
+    .show-cards {
+        flex-wrap: wrap;
+        gap: var(--spacing);
+        margin: var(--spacing);
+    }
+
+    .card {
+        min-width: 300px;
+        flex: 10000;
     }
 </style>

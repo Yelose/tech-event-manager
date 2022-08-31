@@ -7,6 +7,7 @@
 
 @endsection
 <form action="" method="POST">
+    @csrf
     <section>
         <div>
             <label for="image">Imagen</label>

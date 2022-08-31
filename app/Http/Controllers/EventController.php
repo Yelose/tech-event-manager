@@ -36,7 +36,7 @@ class EventController extends Controller
 
     public function create()
     {
-        //
+        return view('event-new');
     }
 
     public function store(Request $request)

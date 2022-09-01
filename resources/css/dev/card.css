@@ -1,0 +1,33 @@
+:root {
+    --spacing: calc(2vh + 3vw)
+}
+
+.show-cards {
+    flex-wrap: wrap;
+    gap: var(--spacing);
+    margin: var(--spacing);
+}
+
+.card {
+    min-width: 360px;
+    flex: 1;
+    max-width: 600px;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-buttons a {
+    background-color: #712E3D;
+    color: white;
+    border: none;
+    text-decoration: none;
+    padding: .5vh calc(.5vw + .5vh);
+    border-radius: 15px;
+}
+
+.card-buttons a:hover {
+    background-color: #B54A62;
+}

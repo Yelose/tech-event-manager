@@ -10,7 +10,7 @@ class EventController extends Controller
     public function home()
     {
         //$events = Event::all();
-        $events = Event::paginate(5);
+        $events = Event::paginate(10);
 
         return view('home', compact('events'));
     }
@@ -25,6 +25,7 @@ class EventController extends Controller
         $event = Event::findOrFail($event);
         return view('event-edit', ['event' => $event]);
     }
+    
     public function create()
     {
         return view('event-new');

@@ -8,5 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class participant extends Model
 {
     use HasFactory;
-    public $timestamps = false;
+        protected $fillable = [
+            'DNI',
+            'name',
+            'email'
+        ];
 }

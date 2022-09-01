@@ -8,7 +8,8 @@ Route::get('/', [EventController::class, 'home'])->name('home');
 Route::get('/show/{event}', ['events' => Event::orderBy('created_at', 'desc')->get()]);
 // Route::get('/show/{event}', [EventController::class, 'show']);
 Route::get('/edit', [EventController::class, 'edit']);
-Route::get('/new', [EventController::class, 'new']);
+Route::get('/create', [EventController::class, 'create'])->name('create');
+Route::post('/', [EventController::class, 'store'])->name('store');
 
 
 Route::get('/dashboard', function () {

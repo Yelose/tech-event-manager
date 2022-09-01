@@ -9,9 +9,10 @@ class EventController extends Controller
 {
     public function home()
     {
-        $events = Event::all();
+        //$events = Event::all();
+        $events = Event::paginate(10);
 
-        return view('home', ['events' => $events]);
+        return view('home', compact('events'));
     }
     public function show($event)
     {
@@ -24,16 +25,7 @@ class EventController extends Controller
         $event = Event::findOrFail($event);
         return view('event-edit', ['event' => $event]);
     }
-    public function new()
-    {
-        return view('event-new');
-    }
-
-    public function index()
-    {
-        //
-    }
-
+    
     public function create()
     {
         return view('event-new');
@@ -41,8 +33,19 @@ class EventController extends Controller
 
     public function store(Request $request)
     {
+        dd($request);
+        //dd($request->hasFile('image'));
+       
+        $event = Event::create($request);
+
+        return $event;
+    }
+
+    public function index()
+    {
         //
     }
+
 
     public function update(Request $request, $id)
     {

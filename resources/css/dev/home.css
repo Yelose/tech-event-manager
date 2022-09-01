@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+main {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.slider {
+    width: 100%;
+    height: 40vh;
+    background-image: url("https://live.staticflickr.com/7750/17906978882_7d028d8daa_b.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

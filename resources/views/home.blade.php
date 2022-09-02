@@ -42,8 +42,7 @@
                                 <p class="leading-relaxed mb-3">{{$event->min_participants}} /
                                     {{$event->max_participants}} Grupo Min/Max </p>
                                 <div class="flex items-center">
-                                    <a class="text-indigo-300 inline-flex items-center md:mb-2 lg:mb-0"
-                                        href="/show/{{$event->id}}">Read More</a>
+                                    <a href="/show/{{$event->id}}">Read More</a>
                                     @auth
                                     <a href="#">inscribirse</a>
                                     @else

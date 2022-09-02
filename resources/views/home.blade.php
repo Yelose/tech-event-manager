@@ -36,6 +36,9 @@
         @else
     </header>
     <main>
+
+
+
         <div class="d-flex flex-row mb-5 show-cards">
             @foreach ($events as $event)
             <div class="card">

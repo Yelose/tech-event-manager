@@ -10,6 +10,11 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     You're logged in!
+                    @if (Auth::user()->isAdmin === 1)
+                    Eres Admin
+                    @else
+                    No eres Admin
+                    @endif
                 </div>
             </div>
         </div>

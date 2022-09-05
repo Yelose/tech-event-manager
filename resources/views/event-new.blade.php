@@ -5,6 +5,7 @@
 
 <h1>Nueva Excursión</h1>
 
+
 @endsection
 <form action="" method="POST">
     @csrf

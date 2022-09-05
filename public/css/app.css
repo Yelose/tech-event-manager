@@ -871,6 +871,9 @@ select {
 .ml-0 {
   margin-left: 0px;
 }
+.mr-20 {
+  margin-right: 5rem;
+}
 .block {
   display: block;
 }

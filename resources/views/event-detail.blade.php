@@ -10,6 +10,7 @@
 
 <body>
     <h1>Detalles</h1>
+    {{$event->title}}
 </body>
 
 </html>

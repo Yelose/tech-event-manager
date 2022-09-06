@@ -25,11 +25,6 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function participants()
-    {
-        return $this->belongsToMany(Participant::class);
-    }
-
     public function events()
     {
         return $this->belongsToMany(Event::class);

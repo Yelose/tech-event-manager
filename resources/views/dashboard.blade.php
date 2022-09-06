@@ -11,7 +11,22 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     You're logged in!
                     @if (Auth::user()->isAdmin === 1)
-                    Eres Admin
+                    <p>Eres Admin</p>
+                    <a href="/create"><button>Crear +</button></a>
+                    <a href="/delete"><button>Borrar -</button></a>
+                    @foreach ($events as $event)
+                    <p class="leading-relaxed mb-3">{{$event->title}}</p>
+                    {{--
+---------------------------------------------------------------------------------------------------
+                        <form action="{{ route('products.destroy', ['product' => $product->id]) }}" method="post">
+                    @csrf
+                    @method('delete');
+                    <button type="submit" class="btn btn-link">Delete</button>
+                    </form>
+                    -----------------------------------------------------------------------------------
+                    --}}
+
+                    @endforeach
                     @else
                     No eres Admin
                     @endif
@@ -19,4 +34,5 @@
             </div>
         </div>
     </div>
+
 </x-app-layout>

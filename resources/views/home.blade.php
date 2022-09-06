@@ -60,5 +60,4 @@
         @endempty
 
     </main>
-
     @endsection

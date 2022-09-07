@@ -1,3 +1,9 @@
+:root{
+    --box-padding: calc(1vw + 1vh);
+}
+main {
+    width: 100%;
+}
 main>figure {
     width: 100%;
     height: 30vh;
@@ -10,4 +16,22 @@ main>figure>img {
 
 span {
     color: #712E3D;
+}
+.days-group-price-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: -30px;
+}
+.days-group-price-container>div{
+    display: flex;
+    gap: 3vw;
+    background-color: white;
+    padding: var(--box-padding);
+}
+.days-group-price-container>div>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
 }

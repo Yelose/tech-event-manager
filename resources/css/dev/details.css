@@ -1,0 +1,13 @@
+main>figure {
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+}
+
+main>figure>img {
+    width: 100%;
+}
+
+span {
+    color: #712E3D;
+}

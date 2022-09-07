@@ -16,16 +16,11 @@
                     <a href="/delete"><button>Borrar -</button></a>
                     @foreach ($events as $event)
                     <p class="leading-relaxed mb-3">{{$event->title}}</p>
-                    {{--
----------------------------------------------------------------------------------------------------
-                        <form action="{{ route('products.destroy', ['product' => $product->id]) }}" method="post">
-                    @csrf
-                    @method('delete');
-                    <button type="submit" class="btn btn-link">Delete</button>
+                    <form action="{{ route('destroy', ['id' => $event->id]) }}" method="post">
+                        @csrf
+                        @method('DELETE');
+                        <button type="submit" class="btn btn-link">Delete</button>
                     </form>
-                    -----------------------------------------------------------------------------------
-                    --}}
-
                     @endforeach
                     @else
                     No eres Admin

@@ -46,8 +46,8 @@ class DashboardController extends Controller
     }
     public function destroy(Request $request)
     {
-        $event = Event::find($request->id);
+        $event = Event::findOrFail($request->id);
         $event->delete();
-        return redirect('/');
+        return redirect('/dashboard');
     }
 }

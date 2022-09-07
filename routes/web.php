@@ -9,8 +9,7 @@ Route::get('/show/{event}', [EventController::class, 'show']);
 Route::get('/edit', [DashboardController::class, 'edit']);
 Route::get('/create', [DashboardController::class, 'create'])->name('create');
 Route::post('/', [DashboardController::class, 'store'])->name('store');
-// Route::delete('products/{product}', 'ProductController@destroy')->name('products.destroy');
-
+Route::delete('/destroy', [DashboardController::class, 'destroy'])->name('destroy');
 
 Route::get('/dashboard', [DashboardController::class, "dashboard"])->middleware(['auth'])->name('dashboard');
 

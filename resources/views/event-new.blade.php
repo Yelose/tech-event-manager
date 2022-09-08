@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="py-12">
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto sm: px-6 lg: px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
         
         <form action="{{ route('store') }}" method="POST" enctype="multipart/form-data">
@@ -61,7 +61,7 @@
                 <div class="grid grid-cols-3">
                     <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Precio:</label>
                     <input name="price" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="number" min="1.00" step="0.05" required/>
-                    <label>&#8364</label>
+                    <span class="text-6xl text-red-900 font-semibold py-4 px-3"> &#8364 </span>
                 </div>
             </div>
             <div class="grid grid-cols-1 mt-5 mx-7">

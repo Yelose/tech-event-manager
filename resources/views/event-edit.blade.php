@@ -1,13 +1,11 @@
 @extends('layouts.main')
 
 @section('content')
-    
 
-    <h1>Editar Vista</h1>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+        <div class="max-w-7xl mx-auto sm: px-6 lg: px-8">
+            <div class="max-w-7xl mx-auto sm: px-6 lg: px-8">
             
             <form action="{{ route('update', ['event' => $event->id]) }}" method="POST" enctype="multipart/form-data">
             @csrf
@@ -17,8 +15,8 @@
                     <img src="/img/images/{{ $event->image }}" id="selected-image" style="max-height: 300px;">           
                 </div>
     
-                <div class="grid grid-cols-1 mt-5 mx-7">
-                <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold mb-1">Subir Imagen</label>
+                <div class="img">
+                <label class="uppercase md: text-sm text-xs text-gray-500 text-light font-semibold mb-1">Subir Imagen</label>
                     <div class='flex items-center justify-center w-full'>
                         <label class='flex flex-col border-4 border-dashed w-full h-32 hover:bg-gray-100 hover:border-purple-300 group'>
                             <div class='flex flex-col items-center justify-center pt-4'>
@@ -37,7 +35,7 @@
                 </div>
                 <div class="grid grid-cols-1 mt-5 mx-7">
                     <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Titulo</label>
-                    <input name="title" value="{{ $event->title }}" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" required/>
+                    <input name="title" value="{{ $event->title }}" class=" py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" required/>
                 </div>
                 <div class="grid grid-cols-1 grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 mt-5 mx-7">
                     <div class="grid grid-cols-1">
@@ -46,8 +44,8 @@
                     </div>
                     <div class="grid grid-cols-2">
                         <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Hora:</label>
-                        {{--  <input name="hour" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="time" required/>  --}}
-                        <input value="{{ $event->hour }}" type="time" name="hour" value="08:00:00" max="23:00:00" min="00:00:00" list="listTime" step="1">  
+                        {{--  <input name="hour"  type="time" required/>  --}}
+                        <input value="{{ $event->hour }}" type="time" name="hour" value="08:00:00" max="23:00:00" min="00:00:00" list="listTime" step="1" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
                     </div> 
                     <div class="grid grid-cols-3">
                         <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Duración:</label>
@@ -66,7 +64,7 @@
                     <div class="grid grid-cols-3">
                         <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Precio:</label>
                         <input name="price" value="{{ $event->price }}" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="number" min="1.00" step="0.05" required/>
-                        <label>&#8364</label>
+                        <span class="text-6xl text-red-900 font-semibold py-4 px-3"> &#8364 </span>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 mt-5 mx-7">
@@ -74,7 +72,7 @@
                     <textarea name="description" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" rows="3"></textarea>
                 </div>
                 <div class="grid grid-cols-1 mt-5 mx-7">
-                    <label class="uppercase md:text-sm text-lg text-gray-500 text-light font-semibold">Incluido:</label>
+                    <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Incluido:</label>
                     <textarea name="included" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" rows="3"></textarea>
                 </div>
     

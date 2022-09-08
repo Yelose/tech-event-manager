@@ -299,6 +299,51 @@ footer>div>svg {
     fill: white;
 }
 
+.dashboard-events-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: .5vh;
+}
+.dashboard-event-title{
+    display: flex;
+    width: 100%;
+}
+.dashboard-event-title>h2{
+    width: 100%;
+    text-align: center;
+}
+.dashboard-event-container{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.dashboard-events-container svg{
+    fill: var(--main-color);
+}
+.date, .event, .hour, .participants, .price, .actions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.date{
+    flex: 3;
+}
+.event{
+    flex: 5
+}
+.hour{
+    flex: 1
+}
+.participants, .price, .actions{
+    flex: 2;
+}
+
+
+
 /*
 ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
 *//*

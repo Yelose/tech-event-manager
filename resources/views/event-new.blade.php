@@ -6,7 +6,6 @@
 <h1>Nueva Excursión</h1>
 
 
-@endsection
 <form action="" method="POST">
     @csrf
     <section>
@@ -105,3 +104,5 @@
 </style>
 
 </html>
+
+@endsection

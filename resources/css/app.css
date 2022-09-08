@@ -5,6 +5,8 @@
 @import './dev/home.css';
 @import './dev/card.css';
 @import './dev/details.css';
+@import './dev/footer.css';
+@import './dev/dashboard.css';
 * {
     margin: 0;
     padding: 0;

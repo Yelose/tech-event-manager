@@ -1,0 +1,18 @@
+footer{
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--box-padding);
+    color: white;
+    gap: calc(var(--box-padding)/2);
+}
+footer>div {
+    display: flex;
+    gap: calc(var(--box-padding)/2);
+}
+footer>div>svg {
+    width: 25px;
+    fill: white;
+}

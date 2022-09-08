@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
             
-            <form action="{{ route('update'), ['id' => $event->id] }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('update', ['event' => $event->id]) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <!-- Para ver la imagen seleccionada-->
@@ -57,11 +57,11 @@
                 <div class="grid grid-cols-1 grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 mt-5 mx-7">
                     <div class="grid grid-cols-1">
                         <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Máximo de Participantes:</label>
-                        <input name="max-participants" value="{{ $event->max-participants }}" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="number" min="10" required/>
+                        <input name="max_participants" value="{{ $event->max_participants }}" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="number" min="10" required/>
                     </div>
                     <div class="grid grid-cols-2">
                         <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Mínimo de Participantes:</label>
-                        <input name="min-participants" value="{{ $event->min-participants }}" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="number" min="2" max="10" required/>
+                        <input name="min_participants" value="{{ $event->min_participants }}" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="number" min="2" max="10" required/>
                     </div>
                     <div class="grid grid-cols-3">
                         <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Precio:</label>

@@ -2,16 +2,12 @@
 
 @section('content')
 
-
-<h1>Nueva Excursión</h1>
-
 <div class="py-12">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
         
         <form action="{{ route('store') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <!-- Para ver la imagen seleccionada-->
             <div class="grid grid-cols-1 mt-5 mx-7">
                 <img id="selected-image" style="max-height: 300px;">           
             </div>
@@ -56,11 +52,11 @@
             <div class="grid grid-cols-1 grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 mt-5 mx-7">
                 <div class="grid grid-cols-1">
                     <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Máximo de Participantes:</label>
-                    <input name="max-participants" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="number" min="10" required/>
+                    <input name="max_participants" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="number" min="10" required/>
                 </div>
                 <div class="grid grid-cols-2">
                     <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Mínimo de Participantes:</label>
-                    <input name="min-participants" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="number" min="2" max="10" required/>
+                    <input name="min_participants" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="number" min="2" max="10" required/>
                 </div>
                 <div class="grid grid-cols-3">
                     <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Precio:</label>
@@ -76,15 +72,10 @@
                 <label class="uppercase md:text-sm text-lg text-gray-500 text-light font-semibold">Incluido:</label>
                 <textarea name="included" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" rows="3"></textarea>
             </div>
-
-            
-
             <div class='flex justify-evenly  md:gap-4 gap-8 pt-5 pb-5'>
                 <button type="submit" class='w-auto bg-red-900 hover:bg-red-900 rounded-lg shadow-xl font-medium text-white px-4 py-2'>Guardar</button>
                 <a href="{{ route('home') }}" class='w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'>Cancelar</a>
             </div>
-
-            
         </form> 
 
         </div>

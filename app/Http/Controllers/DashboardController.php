@@ -54,7 +54,7 @@ class DashboardController extends Controller
     public function update(Request $request, Event $event)
     {
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,svg|max:10240', 
+            'image' => 'required|image|mimes:jpeg,png,svg|max:4096', 
             'title' => 'required', 
             'date' => 'required', 
             'hour' => 'required', 

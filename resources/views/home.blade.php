@@ -37,7 +37,7 @@
         </div>
         @endforeach
     </div>
-    {!! $events->links() !!}
+    
 
 
     @endempty

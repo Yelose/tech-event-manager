@@ -25,6 +25,8 @@
     </div>
 </div>
 
+@endsection
+
 <script>
     (function(){
         'use strict'
@@ -44,6 +46,7 @@
                     confirmButtonText: '¡Sí, Eliminar!'
                   }).then((result) => {
                     if (result.isConfirmed) {
+                        this.submit();
                       Swal.fire(
                         '¡Eliminado!',
                         'El Evento a sido Eliminado',
@@ -53,9 +56,9 @@
                   })
             }, false)
         })
-    })
+    })()
 </script>
 
-@endsection
+
 
 

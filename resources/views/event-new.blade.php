@@ -45,8 +45,9 @@
                 </div>
                 <div class="grid grid-cols-2">
                     <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Hora:</label>
-                    <input name="hour" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="time" required/>
-                </div>
+                    {{--  <input name="hour" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="time" required/>  --}}
+                    <input type="time" name="hour" value="08:00:00" max="23:00:00" min="00:00:00" list="listTime" step="1">  
+                </div> 
                 <div class="grid grid-cols-3">
                     <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Duración:</label>
                     <input name="duration" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" required/>
@@ -63,7 +64,7 @@
                 </div>
                 <div class="grid grid-cols-3">
                     <label class="uppercase md:text-sm text-xs text-gray-500 text-light font-semibold">Precio:</label>
-                    <input name="price" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="number" min="1.00" step="0.10" required/>
+                    <input name="price" class="py-2 px-3 rounded-lg border-2 border-purple-300 mt-1 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="number" min="1.00" step="0.05" required/>
                     <label>&#8364</label>
                 </div>
             </div>
@@ -82,6 +83,8 @@
                 <button type="submit" class='w-auto bg-red-900 hover:bg-red-900 rounded-lg shadow-xl font-medium text-white px-4 py-2'>Guardar</button>
                 <a href="{{ route('home') }}" class='w-auto bg-gray-500 hover:bg-gray-700 rounded-lg shadow-xl font-medium text-white px-4 py-2'>Cancelar</a>
             </div>
+
+            
         </form> 
 
         </div>

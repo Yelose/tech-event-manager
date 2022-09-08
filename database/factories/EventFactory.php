@@ -12,7 +12,7 @@ class EventFactory extends Factory
             'image' => 'https://loremflickr.com/680/480/cat?random=10',
             'title' => $this->faker->sentence(2),
             'date' => $this->faker->dateTimeBetween('+0 days', '+2 years'),
-            'hour' => $this->faker->time($format = 'H:00'),
+            // 'hour' => $this->faker->time($format = 'H:00'),
             'duration' => $this->faker->randomElement(['3 días', '5 días', '8 días', '10 días', '20 días']),
             'max_participants' => $this->faker->numberBetween(25, 30),
             'min_participants' => $this->faker->numberBetween(2, 25),

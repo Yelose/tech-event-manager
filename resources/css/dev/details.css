@@ -41,9 +41,14 @@ section {
 .days-group-container{
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
     z-index: 1000;
     height: fit-content;
+    align-items: center;
+    flex-direction: column;
+}
+.details-float {
+    width: fit-content;
+    justify-content: space-evenly;
 }
 .days-group-container>div{
     display: flex;
@@ -71,6 +76,36 @@ aside{
     flex: 1;
     z-index: 10;
     gap: 4vh;
+}
+.event-description{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+hr {
+    width: 100%;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+}
+.table-content{
+    display: flex;
+    flex-direction: column;
+}
+.table-content>section{
+    display: flex;
+}
+.table-content>section>div:first-child{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3vw;
+}
+.table-content>section>div>h2{
+    font-weight: bold;
+}
+.table-content>section>div{
+    flex: 10;
 }
 aside>div {
     display: flex;
@@ -101,17 +136,47 @@ aside>div {
     color: white;
     padding: .5vh var(--box-padding);
 }
+
 .suitcase {
     width: 30%;
 }
 .subscribe {
     display: flex;
     flex-direction: column;
+    gap: calc(var(--box-padding)/4);
 }
 .subscribe>div {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subscribe>a>h4{
+    color: white;
+    text-align: center;
+    padding: calc(var(--box-padding)/4);
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    color: white;
     justify-content: center;
+    align-items: center;
+    padding: var(--box-padding);
+    gap: calc(var(--box-padding)/2);
+}
+.contact>div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: calc(var(--box-padding)/4);
 }
 .bg-main {
     background-color: var(--main-color);
 }
+.bg-gray {
+    background-color: gray;
+}
+

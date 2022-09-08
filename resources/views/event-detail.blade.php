@@ -9,7 +9,7 @@
     </figure>
     <div class="details-content">
         <section class="days-group-container">
-            <div>
+            <div class="details-float">
                 <div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#712E3D" class="w-6 h-6">
                         <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
                     </svg>
@@ -30,6 +30,41 @@
                     </div>
 
                 </div>
+            </div>
+            <div class="event-description">
+                <p>{{$event->description}}</p>
+                <p>¡Un plan inolvidable!</p>
+            </div>
+            <div class="table-content">
+                <hr>
+                <section>
+                    <div>
+                        <h2>Fecha</h2>
+                    </div>
+                    <div>
+                        <p>{{$event->date}}</p>
+                    </div>
+                </section>
+                <hr>
+                <section>
+                    <div>
+                        <h2>Precio</h2>
+                    </div>
+                    <div>
+                        <p>{{$event->price}} €</p>
+                    </div>
+                </section>
+                <hr>
+                <section>
+                    <div>
+                        <h2>Incluido</h2>
+                    </div>
+                    <div>
+                        <p>{{$event->included}}</p>
+                    </div>
+
+                </section>
+            </div>
         </section>
         <aside>
             <div class="price-content">
@@ -44,18 +79,21 @@
                     <h4>Por persona</h4>
                 </div>
             </div>
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#712E3D" class="suitcase">
-                    <path fill-rule="evenodd" d="M7.5 5.25a3 3 0 013-3h3a3 3 0 013 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0112 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 017.5 5.455V5.25zm7.5 0v.09a49.488 49.488 0 00-6 0v-.09a1.5 1.5 0 011.5-1.5h3a1.5 1.5 0 011.5 1.5zm-3 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd" />
-                    <path d="M3 18.4v-2.796a4.3 4.3 0 00.713.31A26.226 26.226 0 0012 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 01-6.477-.427C4.047 21.128 3 19.852 3 18.4z" />
-                </svg>
-            </div>
             <div class="subscribe">
                 <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#712E3D" class="suitcase">
+                        <path fill-rule="evenodd" d="M7.5 5.25a3 3 0 013-3h3a3 3 0 013 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0112 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 017.5 5.455V5.25zm7.5 0v.09a49.488 49.488 0 00-6 0v-.09a1.5 1.5 0 011.5-1.5h3a1.5 1.5 0 011.5 1.5zm-3 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd" />
+                        <path d="M3 18.4v-2.796a4.3 4.3 0 00.713.31A26.226 26.226 0 0012 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 01-6.477-.427C4.047 21.128 3 19.852 3 18.4z" />
+                    </svg>
                     <p>¡No te quedes sin tu cupo!</p>
                 </div>
+            </div>
+            <div class="bg-gray contact">
+                <div>
+                    <p>¿Tienes alguna duda?</p>
+                </div>
                 <div class="bg-main">
-                    <a href="#">Suscribir</a>
+                    <h3>Contactar</h3>
                 </div>
             </div>
         </aside>

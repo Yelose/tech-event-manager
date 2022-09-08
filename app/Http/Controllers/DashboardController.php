@@ -23,6 +23,7 @@ class DashboardController extends Controller
     {
         $event = Event::findOrFail($event);
         return view('event-edit', ['event' => $event]);
+
     }
 
     public function create()
@@ -32,17 +33,51 @@ class DashboardController extends Controller
 
     public function store(Request $request)
     {
-        dd($request);
-        //dd($request->hasFile('image'));
+        // dd($request);
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,svg|max:10240', 'title' => 'required', 'date' => 'required', 'hour' => 'required', 'duration' => 'required', 'max-participants' => 'required', 'min-participants' => 'required', 'price' => 'required',  'description' => 'required', 'included' => 'required'
+        ]);
 
-        $event = Event::create($request);
+         $event = $request->all();
 
-        return $event;
+         if($image = $request->file('image')) {
+             $imageSavePath = 'img/images/';
+             $imageEvent = date('YmdHis'). "." . $image->getClientOriginalExtension();
+             $image->move($imageSavePath, $imageEvent);
+             $event['image'] = "$imageEvent";             
+         }
+         
+         Event::create($event);
+         return redirect()->route('home');
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, Event $event)
     {
-        //
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,svg|max:4096', 
+            'title' => 'required', 
+            'date' => 'required', 
+            'hour' => 'required', 
+            'duration' => 'required', 
+            'max-participants' => 'required', 
+            'min-participants' => 'required', 
+            'price' => 'required',  
+            'description' => 'required', 
+            'included' => 'required'
+        ]);
+
+         $e = $request->all();
+
+         if($image = $request->file('image')) {
+             $imageSavePath = 'img/images/';
+             $imageEvent = date('YmdHis'). "." . $image->getClientOriginalExtension();
+             $image->move($imageSavePath, $imageEvent);
+             $event['image'] = "$imageEvent";             
+         }else{
+            unset($event['image']);
+         }
+         $event->update($e);
+         return redirect()->route('home');
     }
     public function destroy(Request $request)
     {

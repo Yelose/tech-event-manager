@@ -9,7 +9,6 @@ class EventController extends Controller
     public function home()
     {
         $events = Event::all();
-        // $events = Event::paginate(10);
 
         return view('home', compact('events'));
     }

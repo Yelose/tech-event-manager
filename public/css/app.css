@@ -1555,10 +1555,6 @@ select {
   font-size: 0.75rem;
   line-height: 1rem;
 }
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
@@ -1581,9 +1577,6 @@ select {
 }
 .leading-relaxed {
   line-height: 1.625;
-}
-.leading-tight {
-  line-height: 1.25;
 }
 .leading-7 {
   line-height: 1.75rem;
@@ -2063,6 +2056,3 @@ select {
     padding-right: 2rem;
   }
 }
-
-
-

@@ -13,7 +13,7 @@ class Event extends Model
         'image',
         'title',
         'date',
-        'Hour',
+        // 'Hour',
         'duration',
         'max_participants',
         'min_participants',

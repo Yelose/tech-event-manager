@@ -89,40 +89,124 @@ main {
 }
 :root{
     --box-padding: calc(1vw + 1vh);
+    --main-color: #712E3D;
 }
 main {
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 main>figure {
     width: 100%;
     height: 30vh;
     overflow: hidden;
+    position: relative;
 }
-
+main>figure>figcaption{
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 2px 2px black;
+}
 main>figure>img {
     width: 100%;
 }
-
-span {
-    color: #712E3D;
+main>.details-content{
+    display: flex;
 }
-.days-group-price-container{
+span {
+    color: var(--main-color);
+}
+section, aside{
+    margin-top: -30px;
+}
+section {
+    flex: 3;
+}
+.days-group-container{
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-    margin-top: -30px;
+    z-index: 1000;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
 }
-.days-group-price-container>div{
+.days-group-container>div{
     display: flex;
     gap: 3vw;
     background-color: white;
     padding: var(--box-padding);
 }
-.days-group-price-container>div>div {
+.days-group-container>div>div {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1vw;
+}
+.days-group-container>div>div>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    z-index: 10;
+    gap: 4vh;
+}
+aside>div {
+    display: flex;
+    justify-content: center;
+}
+.price-content{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+.price-content>div{
+    display: flex;
+    align-items: center;
+}
+.price-content>div:first-child{
+    background-color: gray;
+    padding: .5vh var(--box-padding);
+    color: white;
+}
+.price-content>div>h3>span {
+    font-size: 24px;
+    color: var(--main-color);
+}
+.price-content>div:nth-child(2){
+    background-color: var(--main-color);
+    color: white;
+    padding: .5vh var(--box-padding);
+}
+.suitcase {
+    width: 30%;
+}
+.subscribe {
+    display: flex;
+    flex-direction: column;
+}
+.subscribe>div {
+    display: flex;
+    justify-content: center;
+}
+.bg-main {
+    background-color: var(--main-color);
 }
 
 /*

@@ -1,25 +1,16 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [EventController::class, 'home'])->name('home');
+Route::get('/show/{event}', [EventController::class, 'show']);
+Route::get('/edit', [DashboardController::class, 'edit']);
+Route::get('/create', [DashboardController::class, 'create'])->name('create');
+Route::post('/', [DashboardController::class, 'store'])->name('store');
+Route::delete('/destroy', [DashboardController::class, 'destroy'])->name('destroy');
 
-Route::get('/detail', function () {
-    return view('event-detail');
-});
-Route::get('/edit', function () {
-    return view('event-edit');
-});
-Route::get('/new', function () {
-    return view('event-new');
-});
-
-
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, "dashboard"])->middleware(['auth'])->name('dashboard');
 
 require __DIR__ . '/auth.php';

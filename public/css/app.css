@@ -280,6 +280,25 @@ aside>div {
 }
 
 
+footer{
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--box-padding);
+    color: white;
+    gap: calc(var(--box-padding)/2);
+}
+footer>div {
+    display: flex;
+    gap: calc(var(--box-padding)/2);
+}
+footer>div>svg {
+    width: 25px;
+    fill: white;
+}
+
 /*
 ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
 *//*

@@ -20,6 +20,7 @@ clone env.example and call it .env
 
 generate key
 
+[![Figma](https://github.com/Yelose/Yelose/blob/main/img/figma.png?raw=true)](https://www.figma.com/file/EbM3kkX1DMi1lGKPYQKgEH/TechDesk_Excursiones?node-id=2%3A10)
 
 ```mermaid
 

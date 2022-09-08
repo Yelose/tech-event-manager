@@ -20,6 +20,7 @@ clone env.example and call it .env
 
 generate key
 
+[![Figma](https://github.com/Yelose/Yelose/blob/main/img/figma.png?raw=true)](https://www.figma.com/file/EbM3kkX1DMi1lGKPYQKgEH/TechDesk_Excursiones?node-id=2%3A10)
 
 ```mermaid
 
@@ -37,7 +38,7 @@ erDiagram
         int id PK
         string name
         string email
-        
+        boolean is_admin
             }
     
     Event }|--|{ Event-User : i
@@ -45,13 +46,16 @@ erDiagram
 
     Event{
         int id PK
-        string title
-        string description
-        string place
         string image
-        int max-participants
-        string participant FK
-        string date
+        string title
+        date date
+        time hour
+        string duration
+        int max_participants
+        int min_participants
+        int price 
+        string description 
+        string included 
     }
     Event-User{
         event user

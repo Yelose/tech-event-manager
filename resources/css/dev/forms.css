@@ -1,0 +1,7 @@
+.colorp {
+    color: var(--main-color);
+}
+
+.button {
+    background-color: var(--main-color);
+}

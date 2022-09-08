@@ -87,22 +87,25 @@ main {
 .card-buttons a:hover {
     background-color: #B54A62;
 }
-:root{
+:root {
     --box-padding: calc(1vw + 1vh);
     --main-color: #712E3D;
 }
+
 main {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
+
 main>figure {
     width: 100%;
     height: 30vh;
     overflow: hidden;
     position: relative;
 }
-main>figure>figcaption{
+
+main>figure>figcaption {
     position: absolute;
     top: 40%;
     text-align: center;
@@ -112,22 +115,29 @@ main>figure>figcaption{
     font-weight: bold;
     text-shadow: 1px 2px 2px black;
 }
+
 main>figure>img {
     width: 100%;
 }
-main>.details-content{
+
+main>.details-content {
     display: flex;
 }
+
 span {
     color: var(--main-color);
 }
-section, aside{
+
+section,
+aside {
     margin-top: -30px;
 }
+
 section {
     flex: 3;
 }
-.days-group-container{
+
+.days-group-container {
     display: flex;
     width: 100%;
     z-index: 1000;
@@ -137,31 +147,35 @@ section {
     align-items: center;
     flex-direction: column;
 }
+
 .details-float {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     justify-content: space-evenly;
 }
-.days-group-container>div{
+
+.days-group-container>div {
     display: flex;
     gap: 3vw;
     background-color: white;
     padding: var(--box-padding);
 }
+
 .days-group-container>div>div {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1vw;
 }
-.days-group-container>div>div>div{
+
+.days-group-container>div>div>div {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-aside{
+aside {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -170,41 +184,50 @@ aside{
     z-index: 10;
     gap: 4vh;
 }
-.event-description{
+
+.event-description {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
+
 hr {
     width: 100%;
     align-self: center;
     margin: 0;
     padding: 0;
 }
-.table-content{
+
+.table-content {
     display: flex;
     flex-direction: column;
 }
-.table-content>section{
+
+.table-content>section {
     display: flex;
 }
-.table-content>section>div:first-child{
+
+.table-content>section>div:first-child {
     flex: 1;
     display: flex;
     justify-content: flex-end;
     padding-right: 3vw;
 }
-.table-content>section>div>h2{
+
+.table-content>section>div>h2 {
     font-weight: bold;
 }
-.table-content>section>div{
+
+.table-content>section>div {
     flex: 10;
 }
+
 aside>div {
     display: flex;
     justify-content: center;
 }
-.price-content{
+
+.price-content {
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -213,20 +236,24 @@ aside>div {
     width: -moz-fit-content;
     width: fit-content;
 }
-.price-content>div{
+
+.price-content>div {
     display: flex;
     align-items: center;
 }
-.price-content>div:first-child{
+
+.price-content>div:first-child {
     background-color: gray;
     padding: .5vh var(--box-padding);
     color: white;
 }
+
 .price-content>div>h3>span {
     font-size: 24px;
     color: var(--main-color);
 }
-.price-content>div:nth-child(2){
+
+.price-content>div:nth-child(2) {
     background-color: var(--main-color);
     color: white;
     padding: .5vh var(--box-padding);
@@ -235,23 +262,26 @@ aside>div {
 .suitcase {
     width: 30%;
 }
+
 .subscribe {
     display: flex;
     flex-direction: column;
     gap: calc(var(--box-padding)/4);
 }
+
 .subscribe>div {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.subscribe>a>h4{
+
+.subscribe>a>h4 {
     color: white;
     text-align: center;
     padding: calc(var(--box-padding)/4);
 }
 
-.contact{
+.contact {
     display: flex;
     flex-direction: column;
     width: -webkit-fit-content;
@@ -266,21 +296,22 @@ aside>div {
     padding: var(--box-padding);
     gap: calc(var(--box-padding)/2);
 }
-.contact>div{
+
+.contact>div {
     display: flex;
     justify-content: center;
     width: 100%;
     padding: calc(var(--box-padding)/4);
 }
+
 .bg-main {
     background-color: var(--main-color);
 }
+
 .bg-gray {
     background-color: gray;
 }
-
-
-footer{
+footer {
     background-color: var(--main-color);
     display: flex;
     flex-direction: column;
@@ -290,15 +321,16 @@ footer{
     color: white;
     gap: calc(var(--box-padding)/2);
 }
+
 footer>div {
     display: flex;
     gap: calc(var(--box-padding)/2);
 }
+
 footer>div>svg {
     width: 25px;
     fill: white;
 }
-
 .dashboard-events-container{
     display: flex;
     flex-direction: column;
@@ -344,6 +376,13 @@ footer>div>svg {
 
 
 
+.colorp {
+    color: var(--main-color);
+}
+
+.button {
+    background-color: var(--main-color);
+}
 /*
 ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
 *//*
@@ -1569,6 +1608,9 @@ select {
 .font-semibold {
   font-weight: 600;
 }
+.font-bold {
+  font-weight: 700;
+}
 .uppercase {
   text-transform: uppercase;
 }
@@ -1893,6 +1935,10 @@ select {
 .group:hover .group-hover\:text-purple-600 {
   --tw-text-opacity: 1;
   color: rgb(147 51 234 / var(--tw-text-opacity));
+}
+.group:hover .group-hover\:text-red-900 {
+  --tw-text-opacity: 1;
+  color: rgb(127 29 29 / var(--tw-text-opacity));
 }
 @media (prefers-color-scheme: dark) {
 

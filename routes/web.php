@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [EventController::class, 'home'])->name('home');
 Route::get('/show/{event}', [EventController::class, 'show']);
-Route::get('/edit', [DashboardController::class, 'edit']);
+Route::get('/edit/{event}', [DashboardController::class, 'edit'])->name('edit');
 Route::get('/create', [DashboardController::class, 'create'])->name('create');
 Route::post('/', [DashboardController::class, 'store'])->name('store');
 Route::delete('/destroy', [DashboardController::class, 'destroy'])->name('destroy');

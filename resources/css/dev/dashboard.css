@@ -23,7 +23,7 @@
 .dashboard-events-container svg{
     fill: var(--main-color);
 }
-.date, .event, .hour, .participants, .price, .actions{
+.image, .date, .event, .hour, .participants, .price, .actions{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,11 +34,15 @@
 .event{
     flex: 5
 }
-.hour{
+.image .hour{
     flex: 1
 }
 .participants, .price, .actions{
     flex: 2;
+}
+.image> img {
+    width: 100px;
+    height: 60px;
 }
 
 
